@@ -37,6 +37,7 @@ darkIcon.addEventListener("click", () => {
 });
 
 themeCheck();
+//
 
 const value = document.getElementById("value");
 const valueMq7 = document.getElementById("value-mq7");
@@ -52,7 +53,8 @@ setInterval(() => {
     .then((res) => {
       api = res;
       console.log(api);
-      valueMq7.innerHTML = api.sensor1.mq7.toString();
+      // const nilai_mq7 = api.sensor1.mq7.toFixed()
+      valueMq7.innerHTML = api.sensor1.mq7.toFixed(2).toString() + "V";
       if (api.sensor2.kipas == 1) {
         value.innerHTML = "ON";
         toogle.checked = true;
