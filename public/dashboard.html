@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmokeBending - Smart air controlling</title>
+    <link rel="icon" href="logo.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="font-poppins text-lg">
+    <section>
+      <!-- Navbar Start -->
+      <div>
+        <nav class="container relative mx-auto p-6">
+          <div class="flex items-center justify-between">
+            <div class="flex">
+              <!-- <img class="h-12 object-scale-down" src="./img/3.png" alt="" /> -->
+              <svg class="h-12 fill-sky-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32.13 41.048">
+                <path
+                  style="fill-opacity: 1; stroke-width: 0.0310815"
+                  d="M64.028 123.326c-.03-.032-.04-.592-.039-2.59 0-1.403.012-2.57.027-2.592.021-.034.124-.038.52-.02.49.022 1.344-.015 1.877-.081 1.54-.19 2.82-.564 4.258-1.24.657-.31 1.536-.643 2.098-.797.3-.081.81-.204.964-.231l.42-.077c.145-.026.424-.07.621-.095.726-.096 2.407-.143 2.48-.07.054.055.054 5.125 0 5.179-.026.026-.203.037-.598.037-.627 0-1.497.045-1.85.095-.71.1-1.086.169-1.55.281-.665.162-1.69.508-2.196.742l-.42.195c-.693.324-.73.34-1.36.565-.235.084-.606.199-.909.281-.11.03-.237.066-.28.08a7.64 7.64 0 0 1-.466.104c-.36.072-.635.115-1.305.208-.405.056-2.243.076-2.292.026zM64.028 132.467c-.03-.031-.04-.592-.039-2.59 0-1.403.012-2.57.027-2.592.021-.033.124-.037.52-.02.49.022 1.344-.015 1.877-.08 1.54-.191 2.82-.565 4.258-1.241.657-.31 1.536-.643 2.098-.796.3-.082.81-.205.964-.232l.42-.076c.145-.027.424-.07.621-.096.726-.096 2.407-.143 2.48-.069.054.054.054 5.124 0 5.178-.026.027-.203.038-.598.038-.627 0-1.497.045-1.85.095-.71.1-1.086.168-1.55.28-.665.162-1.69.508-2.196.742l-.42.195c-.693.325-.73.34-1.36.565-.235.085-.606.2-.909.282-.11.03-.237.066-.28.08a7.64 7.64 0 0 1-.466.103c-.36.072-.635.116-1.305.208-.405.056-2.243.077-2.292.026z"
+                  transform="matrix(2.41476 0 0 2.41476 -154.518 -278.898)"
+                />
+              </svg>
+              <div class="ml-2 -mt-1 place-content-center text-3xl font-extrabold">
+                <h1 class="-mb-3">SMOKE</h1>
+                <h1>BENDING</h1>
+              </div>
+            </div>
+            <div class="flex space-x-6">
+              <label class="swap-rotate swap">
+                <!-- this hidden checkbox controls the state -->
+                <input type="checkbox" id="toggleTheme" />
+
+                <!-- sun icon -->
+                <svg class="swap-on h-8 w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
+                  />
+                </svg>
+
+                <!-- moon icon -->
+                <svg class="swap-off h-8 w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"
+                  />
+                </svg>
+              </label>
+              <button id="logout-button" class="h-1 fill-current" value="ok">
+                <label>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                  </svg>
+                </label>
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="mx-auto mt-5 flex justify-center">
+        <div class="card w-96 bg-secondary shadow-md">
+          <div class="flex p-10">
+            <div class="h-28 w-28 rounded-full bg-sky-400">
+              <svg class="mx-auto w-24 fill-base-100 pt-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                <path
+                  d="M23.25 40q-2.7 0-4.275-1.4-1.575-1.4-1.575-4.25h3.4q0 1.3.575 1.975T23.25 37q1.35 0 1.925-.6t.575-2.05q0-1.45-.575-2.125t-1.925-.675H4v-3h19.25q2.7 0 4.1 1.4 1.4 1.4 1.4 4.4 0 2.85-1.4 4.25t-4.1 1.4ZM4 19.6v-3h27.4q1.85 0 2.7-.875.85-.875.85-2.925t-.85-2.925Q33.25 9 31.4 9q-1.9 0-2.75 1.025-.85 1.025-.85 2.575h-3q0-2.9 1.75-4.75T31.4 6q3.05 0 4.8 1.775t1.75 5.025q0 3.25-1.75 5.025-1.75 1.775-4.8 1.775Zm33.6 16.5v-3q1.75 0 2.575-.975Q41 31.15 41 29.3q0-1.9-.925-2.75-.925-.85-2.675-.85H4v-3h33.4q3.1 0 4.85 1.75Q44 26.2 44 29.3q0 3.2-1.65 5-1.65 1.8-4.75 1.8Z"
+                />
+              </svg>
+            </div>
+            <div class="my-auto pl-5">
+              <h1 class="text-3xl font-semibold">Gas Value</h1>
+              <h1 class="text-5xl font-extrabold" id="value-mq7">--</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mx-auto mt-8 flex justify-center">
+        <div class="card w-96 bg-secondary shadow-md">
+          <div class="flex p-10">
+            <div class="my-auto h-28 w-28 rounded-full bg-sky-400">
+              <svg class="mx-auto w-24 fill-base-100 pt-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                <path
+                  d="M21.2 44q-2.55 0-3.875-1.525Q16 40.95 16 39q0-1.3.575-2.525.575-1.225 1.775-2.025 1.1-.7 1.825-1.875.725-1.175 1.075-3.225-.05 0-.05-.025t-.1-.075l-5.8 2.05q-.85.3-1.65.5-.8.2-1.65.2-3.15 0-5.575-2.75Q4 26.5 4 21.2q0-2.55 1.525-3.875Q7.05 16 8.95 16q1.3 0 2.55.575 1.25.575 2.05 1.775.7 1.1 1.975 1.875Q16.8 21 18.65 21.25q.05-.05.075-.1.025-.05.025-.1L16.7 15.3q-.3-.85-.5-1.65-.2-.8-.2-1.6 0-3.2 2.75-5.625T26.8 4q2.55 0 3.875 1.525Q32 7.05 32 8.95q0 1.3-.575 2.55-.575 1.25-1.775 2.05-1.3.85-2.025 2.25-.725 1.4-.825 2.9.05.05.075.025.025-.025.075.075l5.75-2.15q.85-.3 1.625-.475T35.95 16Q40 16 42 19.35t2 7.45q0 2.55-1.6 3.875Q40.8 32 38.85 32q-1.25 0-2.425-.575-1.175-.575-1.975-1.775-.7-1.1-1.875-1.825Q31.4 27.1 29.35 26.7l-.075.15q-.025.05-.075.1l2.1 5.75q.3.8.5 1.525.2.725.2 1.525.05 3.25-2.7 5.75T21.2 44ZM24 27q1.25 0 2.125-.875T27 24q0-1.25-.875-2.125T24 21q-1.25 0-2.125.875T21 24q0 1.25.875 2.125T24 27Zm-2.9-8.25q.6-.25 1.3-.45.7-.2 1.4-.3.4-2.25 1.475-4.05 1.075-1.8 2.725-2.9.5-.35.75-.875T29 8.95q0-.8-.525-1.375T26.8 7q-2.15 0-4.925 1.025T19 12.05q0 .55.125 1.05t.275.9ZM12 29q.7 0 2-.4l4.75-1.7q-.4-.7-.575-1.4Q18 24.8 18 24.2q-2.25-.4-4.05-1.475-1.8-1.075-2.9-2.725-.35-.5-.95-.75T8.95 19q-.95 0-1.45.525T7 21.2q0 3.1 1.275 5.45T12 29Zm9.2 12q2.65 0 5.225-1.15Q29 38.7 29 35.9q0-.55-.1-.95-.1-.4-.3-.95l-1.7-4.75q-.65.3-1.325.5-.675.2-1.375.25-.4 2.25-1.475 4.05-1.075 1.8-2.725 2.9-.45.3-.725.925Q19 38.5 19 39.05q.05.75.55 1.35.5.6 1.65.6Zm17.65-12q.85 0 1.5-.45T41 26.8q0-2.2-1.025-4.95T35.9 19q-.55 0-1.025.1-.475.1-.875.25l-4.75 1.75q.25.4.5 1.275.25.875.25 1.425 2.25.4 4.05 1.475 1.8 1.075 2.9 2.725.3.4.825.7.525.3 1.075.3ZM30 23.8ZM23.8 18ZM18 24.2Zm6.2 5.8Z"
+                />
+              </svg>
+            </div>
+            <div class="my-auto pl-5">
+              <h1 class="text-3xl font-semibold">Fan</h1>
+              <h1 class="pb-4 text-5xl font-extrabold" id="value">--</h1>
+              <input type="checkbox" class="toggle toggle-primary toggle-lg" id="toggle" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The button to open modal -->
+      <div class="mt-10 flex justify-center">
+        <label for="my-modal-3" class="modal-button btn btn-info rounded-full">
+          <svg class="mx-auto mr-2 w-6 fill-base-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 14a1 1 0 0 1-2 0v-5a1 1 0 0 1 2 0v5Zm-1-7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
+          </svg>
+          <h4 class="font-extrabold text-base-100">How it works?</h4>
+        </label>
+        <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+        <div class="modal">
+          <div class="modal-box relative overflow-y-hidden">
+            <label for="my-modal-3" class="btn btn-circle btn-sm absolute right-2 top-2">✕</label>
+            <h3 class="text-lg font-bold">Cara kerja SmokeBending</h3>
+            <div>
+              <img src="./img/product.png" alt="" class="rounded-lg" />
+            </div>
+            <h4 class="py-4">Indikator Gas:<br />0-1 Kipas Mati<br />1-3 Kipas Menyala pelan<br />3-5 Kipas Menyala cepat</h4>
+            <p class="py-4">Setelah menggunakan fitur toggle pada website, pastikan atur kembali ke posisi "OFF" untuk menghidupkan / mematikan kipas secara otomatis</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="module">
+      import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-auth.js";
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAcKXxJwjhm9s7hkcb4tStxz8j_18q1Ua4",
+        authDomain: "loginweb-d5158.firebaseapp.com",
+        databaseURL: "https://loginweb-d5158-default-rtdb.firebaseio.com",
+        projectId: "loginweb-d5158",
+        storageBucket: "loginweb-d5158.appspot.com",
+        messagingSenderId: "977139409443",
+        appId: "1:977139409443:web:c6dbce940932fec4c3c796",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      let logoutButton = document.getElementById("logout-button");
+      console.log(logoutButton);
+
+      logoutButton.addEventListener("click", (e) => {
+        const auth = getAuth(app);
+        signOut(auth)
+          .then(() => {
+            alert("sukses logout");
+            location.href = "http://localhost:8080/?#";
+          })
+          .catch((error) => {});
+      });
+    </script>
+  </body>
+</html>
