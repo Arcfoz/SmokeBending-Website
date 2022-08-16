@@ -42,7 +42,7 @@ const value = document.getElementById("value");
 const valueMq7 = document.getElementById("value-mq7");
 const toogle = document.getElementById("toggle");
 
-const url = "http://localhost:8080/api";
+const url = "https://smoke-bending.herokuapp.com/api";
 
 var api = {};
 

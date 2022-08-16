@@ -45,7 +45,7 @@ signupButton.addEventListener('click', (e) => {
     })
     .then(() => {
       alert('User Telah Ditambahkan,Silahkan Sign In');
-      location.href = 'http://localhost:8080/?#';
+      location.href = 'https://smoke-bending.herokuapp.com/?#';
     })
     .catch((error) => {
       alert(error);
@@ -64,7 +64,7 @@ signinButton.addEventListener('click', (e) => {
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
-      location.href = 'http://localhost:8080/dashboard';
+      location.href = 'https://smoke-bending.herokuapp.com/dashboard';
       // ...
     })
     .catch((error) => {
