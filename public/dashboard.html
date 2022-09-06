@@ -141,7 +141,7 @@
         const auth = getAuth(app);
         signOut(auth)
           .then(() => {
-            alert("sukses logout");
+            alert("Logout berhasil!");
             location.href = "https://smoke-bending.herokuapp.com/?#";
           })
           .catch((error) => {});
