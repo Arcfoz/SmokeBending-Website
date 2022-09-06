@@ -51,5 +51,5 @@ app.post("/api", (req, res) => {
 
 //Listen
 app.listen(port, () => {
-  console.log(`Aplikasi berjalan di port http://localhost:${port}`)
+  console.log(`Aplikasi berjalan`)
 });
