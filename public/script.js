@@ -42,6 +42,7 @@ themeCheck();
 const value = document.getElementById("value");
 const valueMq7 = document.getElementById("value-mq7");
 const toogle = document.getElementById("toggle");
+const fanLogo = document.getElementById("fan-logo");
 
 const url = "https://smoke-bending.herokuapp.com/api";
 

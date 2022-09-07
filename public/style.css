@@ -1894,6 +1894,42 @@ body[dir="rtl"] .checkbox:checked,
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@-webkit-keyframes wiggle{
+  0%, 100%{
+    transform: rotate(-5deg);
+  }
+
+  50%{
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes wiggle{
+  0%, 100%{
+    transform: rotate(-5deg);
+  }
+
+  50%{
+    transform: rotate(5deg);
+  }
+}
+
+.animate-wiggle{
+  -webkit-animation: wiggle 2s ease-in-out infinite;
+          animation: wiggle 2s ease-in-out infinite;
+}
+
+@keyframes spin{
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin{
+  -webkit-animation: spin 7s linear infinite;
+          animation: spin 7s linear infinite;
+}
+
 .cursor-pointer{
   cursor: pointer;
 }

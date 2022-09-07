@@ -6,6 +6,16 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins", "Arial", "sans-serif"],
       },
+      animation: {
+        spin: "spin 7s linear infinite",
+        wiggle: "wiggle 2s ease-in-out infinite",
+      },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-5deg)" },
+          "50%": { transform: "rotate(5deg)" },
+        },
+      },
     },
   },
   daisyui: {
