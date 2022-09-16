@@ -45,7 +45,7 @@ signupButton.addEventListener("click", (e) => {
     })
     .then(() => {
       alert("User Telah Ditambahkan,Silahkan Sign In");
-      location.href = "https://smoke-bending.herokuapp.com/";
+      location.href = "https://smokebending.up.railway.app/";
     })
     .catch((error) => {
       alert(error);
@@ -65,7 +65,7 @@ signinButton.addEventListener("click", (e) => {
       // Signed in
       alert("Berhasil Login!");
       const user = userCredential.user;
-      location.href = "https://smoke-bending.herokuapp.com/dashboard";
+      location.href = "https://smokebending.up.railway.app/dashboard";
       // ...
     })
     .catch((error) => {
