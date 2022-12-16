@@ -17,13 +17,13 @@ app.get("/dashboard", (req, res) => {
 
 //Restapi
 app.get("/api", function (req, res) {
-  antares.setAccessKey("3c029a06d6d236ae:09deb22e3dd36497");
-  const mq7 = antares.get("Smoke_Bending", "mq7").then(function (response) {
+  antares.setAccessKey("72b10c7d37ec154d:a4b0643a1ccd8e0c");
+  const mq7 = antares.get("SmokeBending", "mq7").then(function (response) {
     const data = response.content;
     return data;
   });
 
-  const fan = antares.get("Smoke_Bending", "fan").then(function (response) {
+  const fan = antares.get("SmokeBending", "fan").then(function (response) {
     const data = response.content;
     return data;
   });
@@ -45,8 +45,8 @@ app.post("/api", (req, res) => {
     return res.status(400).send({ status: "failed" });
   }
   res.status(200).send({ status: "recieved" });
-  antares.setAccessKey("3c029a06d6d236ae:09deb22e3dd36497");
-  antares.send(parcel, "Smoke_Bending", "fan");
+  antares.setAccessKey("72b10c7d37ec154d:a4b0643a1ccd8e0c");
+  antares.send(parcel, "SmokeBending", "fan");
 });
 
 //Listen
