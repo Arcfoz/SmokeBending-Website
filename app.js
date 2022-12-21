@@ -17,7 +17,7 @@ app.get("/dashboard", (req, res) => {
 
 //Restapi
 app.get("/api", function (req, res) {
-  antares.setAccessKey("72b10c7d37ec154d:a4b0643a1ccd8e0c");
+  antares.setAccessKey("e01232dd1ac0466b:b0c014e4d1427939");
   const mq7 = antares.get("smoke-bending", "mq7").then(function (response) {
     const data = response.content;
     return data;
