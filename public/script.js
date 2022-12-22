@@ -44,7 +44,7 @@ const valueMq7 = document.getElementById("value-mq7");
 const toogle = document.getElementById("toggle");
 const fanLogo = document.getElementById("fan-logo");
 
-const url = "https://smokebending.up.railway.app/api";
+const url = "https:/smokebending.up.railway.app/api";
 
 var api = {};
 
@@ -56,7 +56,7 @@ setInterval(() => {
       console.log(api);
       // const nilai_mq7 = api.sensor1.mq7.toFixed()
       valueMq7.innerHTML = api.sensor1.mq7.toFixed(2).toString() + "V";
-      if (api.sensor2.kipas == 1) {
+      if (api.sensor2.fan == 1) {
         value.innerHTML = "ON";
         toogle.checked = true;
       } else {
@@ -70,9 +70,9 @@ toogle.addEventListener("click", toogleInfo);
 
 async function toogleInfo() {
   if (toogle.checked == true) {
-    api.sensor2.kipas = 1;
+    api.sensor2.fan = 1;
   } else {
-    api.sensor2.kipas = 0;
+    api.sensor2.fan = 0;
   }
   const res = await fetch(url, {
     method: "POST",
