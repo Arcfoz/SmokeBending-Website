@@ -44,6 +44,8 @@ const valueMq7 = document.getElementById("value-mq7");
 const toogle = document.getElementById("toggle");
 const speed = document.getElementById("speed");
 const fanLogo = document.getElementById("fan-logo");
+var notification = document.getElementById("notification");
+notification.style.display = "none";
 
 const url = "https://smokebending-86277-default-rtdb.asia-southeast1.firebasedatabase.app/smokebending.json";
 
@@ -56,6 +58,11 @@ setInterval(() => {
       api = res;
       // console.log(api);
       valueMq7.innerHTML = api.sensor1.mq7.toFixed(2).toString() + "V";
+      if (api.sensor1.mq7 > 1) {
+        notification.style.display = "block";
+      } else {
+        notification.style.display = "none";
+      }
       if (api.sensor2.fan == 1) {
         value.innerHTML = "ON";
         toogle.checked = true;
