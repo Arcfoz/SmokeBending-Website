@@ -1,5 +1,5 @@
 
-![Logo](https://github.com/Arcfoz/SmokeBending-Website/blob/4d84fc68216c7808d19ac39766018e776f5f2f27/public/img/main_logo.png?raw=true)
+![Logo](https://github.com/Arcfoz/SmokeBending-Website/blob/main/public/img/product.png?raw=true)
 
 
 ## Smoke Bending
