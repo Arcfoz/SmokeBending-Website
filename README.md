@@ -35,7 +35,14 @@ Website ini memiliki fitur untuk memonitoring sensor gas MQ7 dan mengatur nyala/
 
 ## Running Tests
 
-Untuk menjalan website secara local, silahkan untuk clone repository terlebih dahulu, kemudian pada terminal ketikan perintah
+Untuk menjalan website secara local, silahkan untuk clone repository terlebih dahulu 
+
+Kemudian install semua dependensi yang diperlukan dengan menggunakan perintah:
+
+```bash
+  npm install
+```
+untuk menjalankan server ketikan:
 
 ```bash
   npm start
