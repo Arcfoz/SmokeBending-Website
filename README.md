@@ -5,6 +5,7 @@
 Website ini memiliki fitur untuk memonitoring sensor gas MQ7 dan mengatur nyala/mati serta kecepatan kipas yang memungkinkan pengguna untuk memantau dan mengontrol kondisi lingkungan di ruangan secara real-time. Dengan menggunakan website ini, pengguna dapat memantau tingkat gas yang terdeteksi oleh sensor MQ7 dan mengatur kipas sesuai dengan kebutuhan untuk menjaga keselamatan dan kenyamanan di ruangan. Fitur ini sangat berguna bagi pengguna yang ingin memastikan bahwa tingkat gas di ruangan selalu aman dan nyaman untuk ditempat
 
 - [SmokeBending Website](https://smokebending.up.railway.app/)
+- [SmokeBending Website - BACKUP](https://smokebending.cyclic.app/)
 - [Source Code SmokeBending](https://github.com/Arcfoz/SmokeBending)
 
 ## Features
