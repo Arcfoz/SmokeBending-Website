@@ -16,12 +16,6 @@ Website ini memiliki fitur untuk memonitoring sensor gas MQ7 dan mengatur nyala/
 - Live database control
 - Cross platform
 
-## Roadmap
-
-- Additional browser support
-
-- Add more integrations
-
 ## Screenshots
 
 ![App Screenshot](https://github.com/Arcfoz/SmokeBending-Website/blob/main/Screenshot%20Website/login.png?raw=true)
